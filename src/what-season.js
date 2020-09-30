@@ -1,6 +1,6 @@
 module.exports = function getSeason(date) {
   if (!date) return 'Unable to determine the time of year!';
-  if (!(date.getTime() === date.getTime())) throw 'THROWN';
+  if (!(date.getTime() === date.getTime())) throw new Error();
 
   let month = date.getMonth();
   if (month >= 0 && month <= 1 || month === 11) return 'winter';
