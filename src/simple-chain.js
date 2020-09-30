@@ -15,9 +15,10 @@ const chainMaker = {
     if (typeof position !== 'number' || position > this.getLength() || position < 0) {
       this.value = [];
       throw new Error();
+    } else {
+      this.value = this.value.filter((item, index) => index !== position - 1);
     }
 
-    this.value = this.value.filter((item, index) => index !== position - 1);
     return this;
   },
 
