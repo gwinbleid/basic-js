@@ -13,7 +13,7 @@ const chainMaker = {
   removeLink(position) {
 
     if (typeof position !== 'number' || position > this.getLength() || position < 0) {
-      this.value.length = [];
+      this.value = [];
       throw new Error();
     }
 
